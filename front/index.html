@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Веб-программирование | лабораторная №1 | Никифоров Антон</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Ponomar&family=Shafarik&display=swap">
+    <link rel="icon" type="image/jpg" href="icon.jpg">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        Веб-программирование, лабораторная №1 <br>
+        Никифоров Антон Евгеньевич <br>
+        Группа P3215, Вариант 409238
+    </header>
+
+    <main>
+        <h2>Введите радиус и координаты точки</h2>
+        <img src="areas.png" alt="График">
+
+        <form id="dataForm" method="post">
+            <label>Выберите X:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="X" value="-5"> -5</label>
+                <label><input type="checkbox" name="X" value="-4"> -4</label>
+                <label><input type="checkbox" name="X" value="-3"> -3</label>
+                <label><input type="checkbox" name="X" value="-2"> -2</label>
+                <label><input type="checkbox" name="X" value="-1"> -1</label>
+                <label><input type="checkbox" name="X" value="0"> 0</label>
+                <label><input type="checkbox" name="X" value="1"> 1</label>
+                <label><input type="checkbox" name="X" value="2"> 2</label>
+                <label><input type="checkbox" name="X" value="3"> 3</label>
+            </div>
+
+            <label>
+                Y:
+                <input type="text" name="Y" placeholder="введите Y от -3 до 5">
+            </label>
+
+            <label>
+                R:
+                <input type="text" name="R" placeholder="введите R от 2 до 5">
+            </label>
+
+            <input type="submit" value="Отправить">
+
+            <div id="errorBox"></div>
+        </form>
+
+        <table id="resultTable">
+            <thead>
+            <tr>
+                <th>X</th>
+                <th>Y</th>
+                <th>R</th>
+                <th>Попадание</th>
+                <th>Текущее время</th>
+                <th>Время обработки (нс)</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
